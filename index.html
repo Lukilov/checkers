@@ -23,7 +23,11 @@
   <style>
     .brand img.logo-image{width:44px;height:44px;object-fit:contain}.brand .brand-name,.footer-brand .brand-name{color:inherit;font-size:16px;font-weight:760;letter-spacing:-.04em}.footer-brand img.logo-image{width:44px;height:44px;object-fit:contain;filter:none}.footer-brand .brand-name{color:#fff;font-size:18px}
   </style>
-</head>
+  <style>
+    .search-wrap{flex:1;min-width:0}
+    .search-wrap input{width:100%}
+  </style>
+  </head>
 <body>
   <header class="site-header"><a class="brand" href="index.html"><img src="assets/trustmark-logo.svg" alt="TrustMark" width="156" height="36"></a><nav class="nav" aria-label="Primary navigation"><a class="active" href="#directory">Certified shops</a><a class="owner" href="owners.html">Get certificate</a></nav><button class="menu" id="menuButton" aria-label="Open menu" aria-expanded="false">☰</button></header>
   <main>
@@ -62,6 +66,7 @@
       const row = event.target.closest('.store-row');
       if(!row) return;
       event.preventDefault();
+      event.stopImmediatePropagation();
       window.location.href = `shop.html?shop=${encodeURIComponent(stores[Number(row.dataset.index)].domain)}`;
     }, true);
   </script>
