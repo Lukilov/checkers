@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="220" height="48" viewBox="0 0 220 48">
+  <rect width="220" height="48" rx="8" fill="#0f5132"/>
+  <circle cx="24" cy="24" r="12" fill="#fff"/>
+  <path d="M18 24l4 4 8-8" stroke="#0f5132" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="44" y="21" font-family="Helvetica,Arial,sans-serif" font-size="11" fill="#d1e7dd">Preverjeno</text>
+  <text x="44" y="35" font-family="Helvetica,Arial,sans-serif" font-size="13" font-weight="700" fill="#fff">Certificirana trgovina</text>
+</svg>
