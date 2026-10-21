@@ -62,7 +62,7 @@
       const row = event.target.closest('.store-row');
       if(!row) return;
       event.preventDefault();
-      window.location.href = `shop.html?shop=${row.dataset.index}`;
+      window.location.href = `shop.html?shop=${encodeURIComponent(stores[Number(row.dataset.index)].domain)}`;
     }, true);
   </script>
   <script>
