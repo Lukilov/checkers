@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="sl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Certifikat — preverjene spletne trgovine</title>
+  <meta name="description" content="Predogled platforme Certifikat za osebno preverjene spletne trgovine.">
+  <style>
+    :root{--bg:#fafaf9;--fg:#1c1917;--muted:#78716c;--line:#e7e5e4;--card:#fff;--accent:#0f5132;--ok:#d1e7dd}
+    *{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.5 system-ui,sans-serif}
+    header{display:flex;justify-content:space-between;align-items:center;padding:12px 16px;border-bottom:1px solid var(--line);gap:16px}
+    main,footer{max-width:760px;margin:0 auto;padding:24px 16px 64px}footer{padding:24px 16px 40px;border-top:1px solid var(--line);color:var(--muted);font-size:14px;display:flex;justify-content:space-between;gap:8px;flex-wrap:wrap}
+    a{color:inherit}.logo{font-weight:700;text-decoration:none;white-space:nowrap}.row{display:flex;gap:8px;flex-wrap:wrap;align-items:center}nav a{text-decoration:none}
+    .btn,button{display:inline-block;background:var(--accent);color:#fff;border:0;border-radius:8px;padding:8px 14px;font:inherit;cursor:pointer;text-decoration:none}
+    .ghost{background:transparent;color:var(--fg);border:1px solid var(--line)}.muted{color:var(--muted)}.hero{padding:32px 0 8px}.hero h1{font-size:clamp(28px,6vw,40px);line-height:1.15;margin:0 0 8px}.hero p{max-width:650px}
+    section{margin:40px 0}.card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:16px;margin:12px 0}.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:12px}.grid .card{margin:0}
+    .shop{display:flex;gap:12px;align-items:center;text-decoration:none;min-width:0}.shop span{min-width:0}.avatar{width:40px;height:40px;flex:none;border-radius:10px;background:var(--ok);display:inline-flex;align-items:center;justify-content:center;font-weight:700}
+    input{font:inherit;padding:8px 10px;border:1px solid var(--line);border-radius:8px;background:var(--card);color:var(--fg);width:100%}.search{flex:1;min-width:190px}.steps{padding-left:20px;display:grid;gap:12px}.steps span{display:block}.chips{display:flex;flex-wrap:wrap;gap:6px;margin:12px 0}.chips button{font-size:13px;padding:4px 10px;border:1px solid var(--line);border-radius:999px;background:transparent;color:var(--fg)}.chips button.active{background:var(--accent);border-color:var(--accent);color:#fff}details{border-bottom:1px solid var(--line);padding:12px 0}summary{cursor:pointer;font-weight:600}
+    .view{display:none}.view.active{display:block}.list{list-style:none;padding:0}.list li{padding:12px 0;border-bottom:1px solid var(--line)}.badge{display:inline-block;background:var(--ok);color:var(--accent);border-radius:999px;padding:3px 10px;font-size:13px;font-weight:600}
+    @media(max-width:560px){header nav a:not(.btn){display:none}footer nav{width:100%}}
+  </style>
+</head>
+<body>
+  <header><a class="logo" href="#domov" data-view="domov">✓ Certifikat</a><nav class="row"><a href="#trgovine" data-view="trgovine">Trgovine</a><a href="#faq">FAQ</a><a class="btn" href="#prijava" data-view="prijava">Get certificate</a></nav></header>
+  <main>
+    <div id="domov" class="view active">
+      <section class="hero"><h1>Nakupujte pri spletnih trgovinah, ki smo jih preverili osebno.</h1><p class="muted">Vsako certificirano trgovino smo pregledali ročno: lastnika, domeno, dokaze o prodaji in video klic. Brez avtomatskih ocen.</p><form class="row" id="searchForm"><input class="search" id="search" placeholder="Ime trgovine ali domena, npr. mojatrgovina.si"><button>Preveri</button></form><p class="muted"><a href="#trgovine" data-view="trgovine">3 certificirane trgovine →</a></p></section>
+      <section><h2>Nazadnje certificirane</h2><div class="grid"><a class="card shop" href="#trgovina" data-view="trgovina"><span class="avatar">M</span><span><strong>Moja trgovina</strong><span class="muted" style="display:block">mojatrgovina.si</span></span></a><a class="card shop" href="#trgovina" data-view="trgovina"><span class="avatar">Z</span><span><strong>Zeleni dom</strong><span class="muted" style="display:block">zelenidom.si</span></span></a></div></section>
+      <section><h2>Kako preverjamo trgovine</h2><ol class="steps"><li><strong>Prijava</strong><span class="muted">Trgovina odda podatke o podjetju in dokaze, da res prodaja.</span></li><li><strong>Domena</strong><span class="muted">Lastnik dokaže, da je domena njegova, z zapisom v DNS.</span></li><li><strong>Pregled</strong><span class="muted">Ročno pregledamo podjetje, davčno številko in dokaze o prodaji.</span></li><li><strong>Video klic</strong><span class="muted">Z lastnikom opravimo video klic in preverimo, da za trgovino stoji resnična oseba.</span></li></ol></section>
+      <section class="card"><h2 style="margin-top:0">Imate spletno trgovino?</h2><p>Pokažite kupcem, da ste preverjeni. Certificirane trgovine dobijo značko za svojo stran in mesto v javnem seznamu.</p><a class="btn" href="#prijava" data-view="prijava">Pridobi certifikat</a></section>
+      <section id="faq"><h2>Pogosta vprašanja</h2><details><summary>Kaj pomeni certifikat?</summary><p class="muted">Da smo trgovino preverili osebno: lastnik je resnična oseba, domena je njegova in trgovina dejansko prodaja blago.</p></details><details><summary>Koliko stane certifikat?</summary><p class="muted">Trenutno je certifikat brezplačen.</p></details><details><summary>Kako dolgo velja?</summary><p class="muted">Eno leto. Pred iztekom trgovino ponovno preverimo.</p></details></section>
+    </div>
+    <div id="trgovine" class="view"><section><h1>Certificirane trgovine</h1><p class="muted">Vsako trgovino smo preverili osebno: lastništvo domene, dokaz o prodaji in video klic z lastnikom.</p><div class="row"><input class="search" id="shopSearch" placeholder="Išči po imenu ali domeni"><button onclick="filterShops()">Išči</button></div><div class="chips"><button class="active">Vse</button><button>Moda</button><button>Dom</button><button>Hrana</button></div><ul class="list" id="shopList"><li><a class="shop" href="#trgovina" data-view="trgovina"><span class="avatar">M</span><span><strong>Moja trgovina</strong> <span class="muted">mojatrgovina.si</span><span class="muted" style="display:block">Dom · ročno preverjena trgovina</span></span></a></li><li><a class="shop" href="#trgovina" data-view="trgovina"><span class="avatar">Z</span><span><strong>Zeleni dom</strong> <span class="muted">zelenidom.si</span><span class="muted" style="display:block">Dom · trajnostni izdelki</span></span></a></li><li><a class="shop" href="#trgovina" data-view="trgovina"><span class="avatar">K</span><span><strong>Kmetija Koren</strong> <span class="muted">kmetijakoren.si</span><span class="muted" style="display:block">Hrana · lokalni izdelki</span></a></li></ul></section></div>
+    <div id="trgovina" class="view"><section><p><a href="#trgovine" data-view="trgovine">← Nazaj na trgovine</a></p><div class="card"><div class="row"><span class="avatar" style="width:56px;height:56px;font-size:24px">M</span><div><h1 style="margin:0">Moja trgovina</h1><span class="muted">mojatrgovina.si</span></div></div><p>Preverjena spletna trgovina z izdelki za dom. Lastništvo domene, dokazi o prodaji in video klic so bili pregledani.</p><span class="badge">✓ Certifikat velja do 21. 10. 2027</span></div></section></div>
+    <div id="prijava" class="view"><section><h1>Pridobi certifikat</h1><p class="muted">To je predstavitveni predogled prijavnega toka. V polni aplikaciji se podatki shranijo v bazo in sledijo preverjanje domene, pregled dokazov ter video klic.</p><form class="card" onsubmit="event.preventDefault(); alert('Predogled: prijava je pripravljena za strežniško različico.');"><label>Ime podjetja<input required placeholder="Moja trgovina d.o.o."></label><br><label>Domena<input required placeholder="mojatrgovina.si"></label><br><label>E-pošta<input required type="email" placeholder="ime@podjetje.si"></label><br><button>Oddaj prijavo</button></form></section></div>
+  </main>
+  <footer><span>© 2026 Certifikat</span><nav class="row"><a href="#trgovine" data-view="trgovine">Trgovine</a><a href="#prijava" data-view="prijava">Za trgovine</a><a href="#domov" data-view="domov">Domov</a></nav></footer>
+  <script>
+    function show(id){document.querySelectorAll('.view').forEach(v=>v.classList.toggle('active',v.id===id));window.scrollTo(0,0)}
+    document.addEventListener('click',e=>{const a=e.target.closest('[data-view]');if(a){e.preventDefault();show(a.dataset.view);history.replaceState(null,'','#'+a.dataset.view)}})
+    document.getElementById('searchForm').addEventListener('submit',e=>{e.preventDefault();document.getElementById('shopSearch').value=document.getElementById('search').value;show('trgovine');filterShops()})
+    function filterShops(){const q=document.getElementById('shopSearch').value.toLowerCase();document.querySelectorAll('#shopList li').forEach(li=>li.style.display=li.textContent.toLowerCase().includes(q)?'':'none')}
+  </script>
+</body>
+</html>
