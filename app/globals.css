@@ -33,9 +33,28 @@ button.ghost { background: transparent; color: var(--fg); border: 1px solid var(
 .bad { background: var(--bad); }
 form.stack { display: grid; gap: 12px; }
 label { display: grid; gap: 4px; font-size: 14px; }
-input, textarea { font: inherit; padding: 8px 10px; border: 1px solid var(--line); border-radius: 8px; background: var(--card); color: var(--fg); width: 100%; }
+input, textarea, select { font: inherit; padding: 8px 10px; border: 1px solid var(--line); border-radius: 8px; background: var(--card); color: var(--fg); width: 100%; }
 code, pre { font-family: ui-monospace, monospace; font-size: 13px; }
 pre { background: var(--bg); border: 1px solid var(--line); border-radius: 8px; padding: 10px; overflow-x: auto; white-space: pre-wrap; word-break: break-all; }
 ul.list { list-style: none; padding: 0; }
-ul.list li { display: flex; justify-content: space-between; gap: 12px; padding: 12px 0; border-bottom: 1px solid var(--line); }
+ul.list li { display: flex; justify-content: space-between; min-width: 0; gap: 12px; padding: 12px 0; border-bottom: 1px solid var(--line); }
 .row { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; }
+header nav a:not(.btn) { text-decoration: none; }
+footer { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px; max-width: 760px; margin: 0 auto; padding: 24px 16px 40px; border-top: 1px solid var(--line); color: var(--muted); font-size: 14px; }
+section { margin: 40px 0; }
+.hero h1 { font-size: clamp(28px, 6vw, 40px); line-height: 1.15; margin-bottom: 8px; }
+.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 12px; }
+.grid .card { margin: 0; }
+.shop { display: flex; gap: 12px; align-items: center; text-decoration: none; min-width: 0; }
+.shop > span { min-width: 0; }
+.clamp { display: block; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-size: 14px; }
+.logo-img { flex: none; border-radius: 10px; object-fit: cover; border: 1px solid var(--line); background: var(--card); }
+.logo-letter { display: inline-flex; align-items: center; justify-content: center; font-weight: 700; color: var(--fg); background: var(--ok); }
+.chips { display: flex; flex-wrap: wrap; gap: 6px; margin: 12px 0; }
+.chips a { font-size: 13px; padding: 4px 10px; border: 1px solid var(--line); border-radius: 999px; text-decoration: none; }
+.chips a.on { background: var(--accent); border-color: var(--accent); color: #fff; }
+.steps { padding-left: 20px; display: grid; gap: 12px; }
+.steps li span { display: block; }
+details { border-bottom: 1px solid var(--line); padding: 12px 0; }
+summary { cursor: pointer; font-weight: 600; }
+.legal h2 { font-size: 18px; margin-top: 28px; }

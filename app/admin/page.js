@@ -31,7 +31,15 @@ function Shop({ s }) {
         {s.expires_at && ` · velja do ${s.expires_at.slice(0, 10)}`}
       </div>
       <p>Domena: {s.domain_verified_at ? '✓ potrjena' : '✗ še ni potrjena'}</p>
-      {s.note && <p style={{ whiteSpace: 'pre-wrap' }}>{s.note}</p>}
+      <div className="row">
+        {s.logo && <img src={`/admin/files/${s.id}/${s.logo}`} alt="" width={48} height={48} className="logo-img" />}
+        <span>
+          <strong>{s.category}</strong>
+          {s.public_email && <span className="muted"> · javni kontakt {s.public_email}</span>}
+          {s.description && <span style={{ display: 'block', whiteSpace: 'pre-wrap' }}>{s.description}</span>}
+        </span>
+      </div>
+      {s.note && <p style={{ whiteSpace: 'pre-wrap' }}><span className="muted">Opomba:</span> {s.note}</p>}
       <p className="row">
         Dokazi:
         {proofs.map((p) => (
