@@ -44,5 +44,11 @@
   </script>
   <script>
   </script>
+  <script>
+    const idPhotoField = document.getElementById('idPhoto')?.closest('.field');
+    if (idPhotoField) idPhotoField.remove();
+    const verificationIntro = document.querySelector('.step[data-step="2"] .step-intro');
+    if (verificationIntro) verificationIntro.textContent = 'Add any supporting proof a real review could use. In this demo files stay in your browser.';
+  </script>
 </body>
 </html>
