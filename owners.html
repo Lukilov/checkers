@@ -47,6 +47,7 @@
   <script>
     const idPhotoField = document.getElementById('idPhoto')?.closest('.field');
     if (idPhotoField) idPhotoField.remove();
+    document.querySelectorAll('#certificateForm [required]').forEach(field => field.removeAttribute('required'));
     const verificationIntro = document.querySelector('.step[data-step="2"] .step-intro');
     if (verificationIntro) verificationIntro.textContent = 'Add any supporting proof a real review could use. In this demo files stay in your browser.';
   </script>
